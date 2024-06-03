@@ -1,0 +1,42 @@
+# Data manipulation and analysis
+numpy
+pandas
+
+# Trouble shooting
+psycopg2
+apache-airflow-providers-celery
+apache-airflow-providers-fab
+
+# Plotting and visualization
+matplotlib
+matplotlib-inline
+pyyaml  # Required by Matplotlib
+
+# Reporting
+datapane
+
+# Miscellaneous
+lxml
+chardet
+colorlog
+dominate
+importlib-resources
+ipynbname
+micawber
+multimethod
+packaging
+pyarrow
+typing-extensions
+vega-datasets
+timedelta
+
+# Jupyter kernel (if needed for executing notebooks)
+#ipykernel==5.5.6
+#traitlets==5.7.1
+#jupyter-client==6.1.12
+#tornado==6.3.3
+#ipython==7.34.0
+#ipython-genutils==0.2.0
+
+# Ensure Cython is installed
+#Cython==0.29.34
