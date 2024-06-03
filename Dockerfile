@@ -13,7 +13,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Copy the requirements file
-COPY requirements.txt /requirements.txt
+COPY mwaa/requirements.txt /requirements.txt
 RUN chown airflow: /requirements.txt
 
 # Switch back to the airflow user and install Python dependencies
