@@ -23,6 +23,8 @@ dag = DAG(
     schedule_interval='@daily',
 )
 
+# REPLACE DUMMY WITH: df = pd.read_pickle(r'/temp/input/data2.pkl')
+
 # Dummy data for the sake of example
 dummy_data = {
     'driver_id': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -116,7 +118,7 @@ def plot_driver_scores_all_pillars(top_10_df, pillars):
 
     ax.legend()
     plt.tight_layout()
-    plt.savefig(os.path.join("/tmp", 'top_10_drivers_scores.png'))
+    plt.savefig(os.path.join("/tmp/output/", 'top_10_drivers_scores.png'))
     plt.close()
 
 # Define the tasks
