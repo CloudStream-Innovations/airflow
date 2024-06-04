@@ -28,7 +28,7 @@ with DAG('process_data_json_zip',
     # File sensor to monitor the folder for the file
     file_sensor_task = FileSensor(
         task_id='file_sensor_task',
-        filepath='/opt/airflow/input/data.json.zip',  
+        filepath='/temp/input/data.json.zip',  
         poke_interval=10,  # Check every 10 seconds for the file
         timeout=600,  # Timeout after 10 minutes if file is not found
     )
