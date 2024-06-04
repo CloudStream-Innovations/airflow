@@ -32,7 +32,7 @@ def install_packages():
 
 def prepare_data():
     # Load the data from the pickle file
-    df = pd.read_pickle('data2.pkl')
+    df = pd.read_pickle('/temp/input/data2.pkl')
 
     # Calculate the 99th and 1st percentiles for each metric column
     metrics = [
@@ -140,7 +140,7 @@ def prepare_data():
         dp.Text(description),
         dp.HTML(styled_html)
     )
-    report.save(path='2b_report_anomalies_and_outliers.html')
+    report.save(path='/temp/output/2b_report_anomalies_and_outliers.html')
 
 # Define the sanity check function
 def sanity_check(df, metrics, percentile_99, percentile_01):
