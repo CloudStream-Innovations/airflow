@@ -86,7 +86,7 @@ def create_dataframe(result, column_names):
     return pd.DataFrame(result, columns=column_names)
 
 def process_taxi_data():
-    file_path_copy = "data_copy.json"
+    file_path_copy = "/temp/input/data_copy.json"
     taxi_groups = extract_taxi_groups(file_path_copy)
     if taxi_groups:
         result = process_taxi_groups(taxi_groups)
@@ -112,7 +112,7 @@ def process_taxi_data():
             'deleted'
         ]
         df = create_dataframe(result, column_names)
-        df.to_pickle('data.pkl')
+        df.to_pickle('/temp/input/data2.pkl')
     else:
         print("Error extracting taxi groups.")
 
@@ -133,7 +133,7 @@ with DAG(
 
     trigger_next_dag = TriggerDagRunOperator(
         task_id='trigger_next_dag',
-        trigger_dag_id='next_dag_id',  # Replace 'next_dag_id' with the actual DAG ID of the next DAG in the pipeline
+        trigger_dag_id='next_dag_id',  # TODO: Replace 'next_dag_id' with the actual DAG ID of the next DAG in the pipeline
     )
 
     task_process_taxi_data >> trigger_next_dag
